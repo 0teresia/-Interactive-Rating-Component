@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Interactive rating component</title>
+</head>
+
+<body>
+  <main class="container" data-js-wrapper>
+        <img src="./assets/images/icon-star.svg" alt="" width="18" height="18" class="image">
+        <h1>How did we do?</h1>
+        <p>
+        Please let us know how we did with your support <br> request. All feedback is appreciated
+        to help us <br> improve our offering!
+      </p>
+      <!-- Rating state start-->
+      <form data-js-form>
+        <div class="rating">
+          <label class="input-radio">
+            <input type="radio" name="rating" value="1" class="sr-only">
+            <span class="content">1</span>
+          </label>
+          <label class="input-radio">
+            <input type="radio" name="rating" value="2" class="sr-only">
+            <span class="content">2</span>
+          </label>
+          <label class="input-radio">
+            <input type="radio" name="rating" value="3" class="sr-only">
+            <span class="content">3</span>
+          </label>
+          <label class="input-radio">
+            <input type="radio" name="rating" value="4" class="sr-only">
+            <span class="content">4</span>
+          </label>
+          <label class="input-radio">
+            <input type="radio" name="rating" value="5" class="sr-only">
+            <span class="content">5</span>
+        </label>
+      </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>      
+    <!-- Rating state end -->
+  </main>
+
+    <!-- Thank you state start -->
+    <template data-js-template >
+       <img src="./assets/images/illustration-thank-you.svg" alt="" class="img">
+       <p class="rating-result">You selected {{rating}} out of 5</p>
+       <h1 class="text-center">Thank you!</h1>
+      <p class="text-center"> We appreciate you taking the time to give a rating.<br> If you ever need more support,
+        don’t hesitate to <br> get in touch!
+      </p>
+    </template>
+  <!-- Thank you state ends -->
+
+      <script src="./script.js"></script>
+</body>
+
+</html>

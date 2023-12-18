@@ -1,0 +1,200 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Poppins:wght@100;300&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* Variables */
+:root {
+    /* Primary Colors */
+    --orange: hsl(25, 97%, 53%);
+    
+    /* Neutral Colors */
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+/* Accessibility Class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Global Styling */
+body {
+    display: grid;
+    text-rendering: optimizeSpeed;
+    min-height: 100vh;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font: 15px;
+    background-color: var(--very-dark-blue);
+}
+
+/*Container Styling */
+.container {
+    padding: 1.5rem;
+    margin: 100px auto 0;
+    background-color: hsl(196, 10%, 28%);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-size: 100% 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/*Header Styles */
+.container h1 {
+    color: var(--white);
+    font-size: 28px;
+    line-height: 1.25;
+    text-align: left;
+}
+/*Paragraph Styles */
+.container p {
+    color: var(--light-grey);
+}
+/* Image Style */
+.image {
+    background-color:var(--dark-blue);
+    border-radius: 50px;
+    padding: 10px;
+}
+/*Rating Component Styling*/
+.rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-radio {
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.input-radio .content {
+    display: block;
+    background-color: var(--dark-blue);
+    color: var(--medium-grey);
+    width: 51px;
+    height: 51px;
+    margin-right: 10px;
+    border-radius: 51px;
+    text-align: center;
+    line-height: 51px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.input-radio:hover .content,
+.input-radio input:focus + .content {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.input-radio input:checked + .content {
+    background-color: var(--light-grey);
+    color: var(--white);
+}
+
+/*Button Styles*/
+.btn {
+    background-color: var(--orange);
+    color: var(--white);
+    height: 50px;
+    border-radius: 40px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+    box-sizing: border-box;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+/* Thank You Section Styling*/
+.rating-result {
+    background-color: var(--dark-blue);
+    
+    width: max-content;
+    margin-inline: auto ;
+    padding-inline: 20px;
+}
+.text-center {
+    color: var(--orange);
+    width: max-content;
+    margin-inline: auto ;
+    padding-inline: 20px;
+    text-align: center;
+}
+.img {
+    margin-inline: auto;
+}
+
+/* Media Queries */
+
+/* Mobile view */
+/* Mobile view */
+@media only screen and (max-width: 375px) {
+    .container {
+        padding: 1rem; /* Adjust padding for smaller screens */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .container h1 {
+        font-size: 20px; /* Increase font size */
+        text-align: center; /* Center the text */
+    }
+
+    .container p {
+        font-size: 14px; /* Adjust font size */
+        text-align: center; /* Center the text */
+    }
+    
+}
+
+
+
+/* Tablet view */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        justify-content: center;
+        text-align: start;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+    .container p {
+        margin-bottom: 15px;
+    }
+}
+
+/* Desktop view */
+@media only screen and (min-width: 1024px) {
+    .container h1 {
+        font-size: 32px;
+    }
+
+    .container p {
+        margin-bottom: 20px;
+    }
+}
